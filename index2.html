@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIH 2025 - Breed Recognition</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <!-- 🔹 NAVBAR -->
+  <nav>
+    <div class="logo">
+      <!-- <img src="SIH_LOGO.jpg" alt="SIH Logo" /> -->
+      <span><b>TEAM INNOV8ORS</b></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#problem">Problem Statement</a></li>
+      <li><a href="#problem-id">Problem ID</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#upload">Breed Identifier</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#form">Response Form</a></li>
+      <li><a href="index.html">Logout</a></li> <!-- 🔹 Logout button -->
+    </ul>
+  </nav>
+
+  <!-- 🔹 HOME -->
+  <section id="home" class="section home">
+    <h1>Image-Based Breed Recognition</h1>
+    <p>For Cattle and Buffaloes of India – A Smart India Hackathon 2025 Project</p>
+  </section>
+
+  <!-- 🔹 PROBLEM STATEMENT -->
+  <section id="problem" class="section">
+    <h2>Problem Statement</h2>
+    <p>
+      Manual identification of cattle and buffalo breeds is slow, prone to errors, and depends heavily on expert knowledge.
+      This project proposes an automated, AI-powered image-based breed recognition system for better livestock management in India.
+    </p>
+  </section>
+
+  <!-- 🔹 PROBLEM ID -->
+  <section id="problem-id" class="section">
+    <h2>Problem Details</h2>
+    <ul class="details-list">
+      <li><strong>Ministry:</strong> Ministry of Fisheries, Animal Husbandry & Dairying</li>
+      <li><strong>Problem Code:</strong> SIH25004</li>
+      <li><strong>Category:</strong> Software</li>
+      <li><strong>Domain:</strong> Agriculture, FoodTech & Rural Development</li>
+    </ul>
+  </section>
+
+  <!-- 🔹 SOLUTION -->
+  <section id="solution" class="section">
+    <h2>Proposed Solution</h2>
+    <p>
+      We will train a deep learning model (CNN) on labeled images of Indian cattle and buffalo breeds. The frontend allows users to upload an image, which is processed by a backend API (Flask/FastAPI) to return the predicted breed.
+    </p>
+  </section>
+
+  <!-- 🔹 IMAGE UPLOAD & PREDICTION -->
+  <section id="upload" class="section">
+    <h2>Breed Identifier</h2>
+    <input type="file" id="imageUpload" accept="image/*">
+    <img id="preview" alt="Preview" style="display:none; max-width:300px;" />
+    <button id="predictBtn">Identify Breed</button>
+    <p id="predictionText">Upload an image and click to predict.</p>
+  </section>
+
+  <!-- 🔹 CONTACT -->
+  <section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@breedrecog.com">info@breedrecog.com</a></p>
+    <p>Phone: +91-1005765671</p>
+    <p>Department:Ministry of Fisheries, Animal Husbandry & Dairying</p>
+  </section>
+
+  <!-- 🔹 RESPONSE FORM -->
+  <section id="form" class="section">
+    <h2>Submit Your Feedback</h2>
+    <form id="responseForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your message..." rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="formStatus"></p>
+  </section>
+
+  <!-- 🔹 FOOTER -->
+  <footer>
+    <p>&copy; TEAM INNOV8ORS. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

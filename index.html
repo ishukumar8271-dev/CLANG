@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Signup</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Login Form -->
+    <div class="form-box login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="input-box">
+          <input type="text" id="loginUsername" required>
+          <label>Username</label>
+          <span class="icon">👤</span>
+        </div>
+        <div class="input-box">
+          <input type="password" id="loginPassword" required>
+          <label>Password</label>
+          <span class="icon">🔒</span>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p class="switch">Don’t have an account? <a href="#" id="signupLink">Sign Up</a></p>
+      </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form-box register">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <div class="input-box">
+          <input type="text" id="signupUsername" required>
+          <label>Username</label>
+          <span class="icon">👤</span>
+        </div>
+        <div class="input-box">
+          <input type="email" id="signupEmail" required>
+          <label>Email</label>
+          <span class="icon">📧</span>
+        </div>
+        <div class="input-box">
+          <input type="password" id="signupPassword" required>
+          <label>Password</label>
+          <span class="icon">🔒</span>
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+        <p class="switch">Already have an account? <a href="#" id="loginLink">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+    const signupLink = document.getElementById('signupLink');
+    const loginLink = document.getElementById('loginLink');
+
+    signupLink.onclick = () => container.classList.add('active');
+    loginLink.onclick = () => container.classList.remove('active');
+
+    // 🚀 Handle Login Redirect
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // stop form reload
+
+      // Simple check (aap backend API bhi use kar sakte ho)
+      const username = document.getElementById("loginUsername").value;
+      const password = document.getElementById("loginPassword").value;
+
+      if(username && password) {
+        // Redirect to index2.html after login
+        window.location.href = "index2.html";
+      } else {
+        alert("Please enter valid credentials!");
+      }
+    });
+  </script>
+</body>
+</html>
